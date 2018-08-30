@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Web2/web/portal.jsp</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Web2/src/java/com/ufpr/tads/web2/servlets/LoginServlet.java</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Web2/web/erro.jsp</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Web2/src/java/com/ufpr/tads/web2/servlets/LogoutServlet.java</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Web2/src/java/com/ufpr/tads/web2/classes/Usuario.java</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Web2/src/java/com/ufpr/tads/web2/servlets/StartupServlet.java</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Web2/src/java/com/ufpr/tads/web2/servlets/PortalServlet.java</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Web2/web/index.html</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Web2/src/java/com/ufpr/tads/web2/servlets/ConfigBean.java</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Web2/src/java/com/ufpr/tads/web2/dao/UsuarioDAO.java</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Web2/src/java/com/ufpr/tads/web2/dao/ConnectionFactory.java</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Web2/src/java/com/ufpr/tads/web2/servlets/LoginBean.java</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Web2/src/java/com/ufpr/tads/web2/servlets/ErroServlet.java</file>
+        </group>
+    </open-files>
+</project-private>
