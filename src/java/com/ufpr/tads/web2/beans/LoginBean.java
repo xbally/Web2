@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ufpr.tads.web2.servlets;
+package com.ufpr.tads.web2.beans;
 
 import java.io.Serializable;
 
@@ -12,21 +12,29 @@ import java.io.Serializable;
  * @author gabri
  */
 public class LoginBean implements Serializable{
-    
-    private String login;
+    private int id;
+    private String nome;
     private String senha;
     
     public LoginBean(){
         }
 
-    public String getLogin() {
-        return login;
+    public int getId() {
+        return id;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setId(int id) {
+        this.id = id;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    
     public String getSenha() {
         return senha;
     }

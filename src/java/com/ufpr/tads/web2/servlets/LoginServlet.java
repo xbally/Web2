@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package com.ufpr.tads.web2.servlets;
+import com.ufpr.tads.web2.beans.ConfigBean;
+import com.ufpr.tads.web2.beans.ErroBean;
+import com.ufpr.tads.web2.beans.LoginBean;
 import com.ufpr.tads.web2.classes.Usuario;
 import com.ufpr.tads.web2.dao.UsuarioDAO;
 import java.io.IOException;
@@ -19,11 +22,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.*;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 /**
  *
  * @author Gabriel
  */
-@WebServlet(urlPatterns = {"/LoginServlet"})
+@WebServlet(urlPatterns = {"/LoginServlet"},  loadOnStartup = 1)
 public class LoginServlet extends HttpServlet {
 
     /**
@@ -37,8 +42,7 @@ public class LoginServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
+              try  {
             
             UsuarioDAO dao = new UsuarioDAO();
             Usuario usuario = new Usuario();
@@ -49,19 +53,14 @@ public class LoginServlet extends HttpServlet {
             
             usuario = dao.selectUsuarioEsp(login, senha);
             
-            out.println("<!DOCTYPE html>");
-            out.println("<html");
-            out.println("<head>");
-            out.println("<title>Servlet LoginServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
+    
             
             if((usuario != null) && (usuario.getLoginusuario().equals(login)) && (usuario.getSenhausuario().equals(senha))) {
-                LoginBean bean = new LoginBean();
-                bean.setLogin(usuario.getLoginusuario());
-                bean.setSenha(usuario.getSenhausuario());                
+                LoginBean log = new LoginBean();
+                log.setId(usuario.getIdusuario());
+                log.setNome(login);
                 HttpSession session = request.getSession();
-                session.setAttribute("usuario", bean);
+                session.setAttribute("login", log);
    
                             // out.println("Usuário " + login + " logado com sucesso<br>");
               
@@ -69,15 +68,17 @@ public class LoginServlet extends HttpServlet {
         
              
         } else {
+            ErroBean erro = new ErroBean();
+                erro.setMsg("Usuário/Senha inválidos");
+                erro.setPage("index.jsp");
                 RequestDispatcher rd = getServletContext().getRequestDispatcher("/erro.jsp");
-                request.setAttribute("msg", "Erro no login");
-                request.setAttribute("page", "Voltar para página de login");
+                request.setAttribute("erro", erro);
                 rd.forward(request, response);
             }
-            
-            out.println("</body>");
-            out.println("</html>");
-        } catch (SQLException | ClassNotFoundException ex) {
+                  
+        } catch (SQLException ex) {
+            Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
             Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -121,5 +122,6 @@ public class LoginServlet extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
+  
 
 }

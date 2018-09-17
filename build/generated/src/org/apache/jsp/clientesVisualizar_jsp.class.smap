@@ -1,0 +1,16 @@
+SMAP
+clientesVisualizar_jsp.java
+JSP
+*S JSP
+*F
++ 0 clientesVisualizar.jsp
+clientesVisualizar.jsp
+*L
+5,65:48
+70,4:114
+73,2:118
+75,9:120,3
+84:147
+85:148,3
+86,5:151
+*E

@@ -85,7 +85,7 @@ public class PortalServlet extends HttpServlet {
                 }
                 out.println("</table><br><br>");
             } else {
-                RequestDispatcher rd = getServletContext().getRequestDispatcher("/ErroServlet");
+                RequestDispatcher rd = getServletContext().getRequestDispatcher("/ErroBean");
                 request.setAttribute("msg", "Usuário não está logado");
                 request.setAttribute("page", "Voltar para a página de login");
                 rd.forward(request, response);

@@ -5,6 +5,7 @@
  */
 package com.ufpr.tads.web2.servlets;
 
+import com.ufpr.tads.web2.beans.ConfigBean;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletConfig;
