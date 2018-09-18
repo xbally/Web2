@@ -73,8 +73,8 @@
                        <td><%= cliente.getCpf() %></td>
                        <td><%= cliente.getNome() %></td>
                        <td><%= cliente.getEmail()%></td>
-                       <td><a href="VisualizarClienteServlet?id=10" class="glyphicon glyphicon-check">Visualizar</a></td>
-                       <td><a href="FormAlterarClienteServlet?id=10" class="glyphicon glyphicon-user">Alterar</a></td>
+                       <td><a href="VisualizarClienteServlet?id=5" class="glyphicon glyphicon-check">Visualizar</a></td>
+                       <td><a href="FormAlterarClienteServlet?id=5" class="glyphicon glyphicon-user">Alterar</a></td>
                        <td><a href="RemoverClienteServlet?id=4" class="glyphicon glyphicon-trash"</a>Excluir</td>
                        </tr>
                  <% }%>

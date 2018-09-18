@@ -54,6 +54,10 @@ public final class clientesAlterar_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
+      out.write("                <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
+      out.write("        <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n");
+      out.write("        <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>\n");
+      out.write("        <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n");
       out.write("        <title>JSP Page</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
@@ -99,9 +103,7 @@ public final class clientesAlterar_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("        <form class=\"form-horizontal\"  action=\"CadastroCliente\" method=\"POST\">\n");
       out.write("            <div class=\"form-group\">\n");
       out.write("            <label class=\"control-label\">CPF</label>\n");
-      out.write("             <input type=\"text\" class=\"form-control  col-sm-3\" name=\"CPF\" value=\"\">");
-      out.print( cliente.getCpf() );
-      out.write("<br>\n");
+      out.write("             <input type=\"text\" class=\"form-control  col-sm-3\" name=\"CPF\" value=\"\"><br>\n");
       out.write("            \n");
       out.write("            Nome <input type=\"text\" class=\"form-control col-sm-7 \" name=\"nome\" value=\"\">");
       out.print( cliente.getNome() );

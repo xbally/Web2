@@ -47,21 +47,15 @@ public class VisualizarClienteServlet extends HttpServlet {
         try {
            
             UsuarioDAO dao = new UsuarioDAO();
-            Usuario usuario = new Usuario();
             ClienteDAO daoC = new ClienteDAO();
-            Cliente client = new Cliente();
-            HttpSession session = request.getSession();
-            String login = request.getParameter("login");
-            String senha = request.getParameter("senha");
-            
-            
+            Cliente clients = new Cliente();
             int id = Integer.parseInt(request.getParameter("id"));
-            List<Cliente> clientes = daoC.Visualizar(id);
-            request.setAttribute("visualizarcliente", clientes);
-           } catch (SQLException ex) {
-                RequestDispatcher rd = getServletContext().getRequestDispatcher("/erro.jsp");
-                rd.forward(request, response);
+            clients.setId(id);
+            clients = daoC.Visualizar(id);
+            request.setAttribute("visualizarcliente", clients);
             } catch (ClassNotFoundException ex) {
+            Logger.getLogger(VisualizarClienteServlet.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
             Logger.getLogger(VisualizarClienteServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
             RequestDispatcher rd = getServletContext().getRequestDispatcher("/clientesVisualizar.jsp");

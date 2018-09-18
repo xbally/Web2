@@ -4,6 +4,7 @@
     Author     : gabri
 --%>
 
+
 <%@page import="com.ufpr.tads.web2.classes.Cliente"%>
 <%@page import="java.util.List"%>
 <%@page import="com.ufpr.tads.web2.dao.ClienteDAO"%>
@@ -66,23 +67,19 @@
         <th>Cep</th>
         <th>Cidade</th>
         <th>UF</th></tr>
-        <% 
-        ClienteDAO dao = new ClienteDAO();
-        List<Cliente> clientes = dao.Visualizar();
-        for( Cliente cliente:clientes ){
-        %> 
+  
          <body><tr>
-                       <td><%= cliente.getCpf() %></td>
-                       <td><%= cliente.getNome() %></td>
-                       <td><%= cliente.getEmail()%></td>
-                       <td><%= cliente.getData()%></td>
-                       <td><%= cliente.getRua()%></td>
-                       <td><%= cliente.getNumero()%></td>
-                       <td><%= cliente.getCep()%></td>
-                       <td><%= cliente.getCidade()%></td>
-                       <td><%= cliente.getUf()%></td>
+                       <td> ${visualizarcliente.cpf}</td>
+                       <td> ${visualizarcliente.nome}</td>
+                       <td> ${visualizarcliente.email}</td>
+                       <td> ${visualizarcliente.data}</td>
+                       <td> ${visualizarcliente.rua}</td>
+                       <td> ${visualizarcliente.numero}</td>
+                       <td> ${visualizarcliente.cep}</td>
+                       <td> ${visualizarcliente.cidade}</td>
+                       <td> ${visualizarcliente.uf}</td>
                     </tr>
-                 <% }%>
+                
     </body>
     </body>
 </html>

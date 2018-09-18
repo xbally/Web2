@@ -52,17 +52,15 @@ public class FormAlterarClienteServlet extends HttpServlet {
             int id = Integer.parseInt(request.getParameter("id"));
             client.setId(id);
             
-            
-            SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
             String str = request.getParameter("data_cliente");
-            Date data = null;
-            data = format.parse(str); 
-
+            SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+            Date data = new Date(format.parse(str).getTime()); 
+           
 
             client.setCpf(request.getParameter("cpf_cliente"));
             client.setNome(request.getParameter("nome_cliente"));
             client.setEmail(request.getParameter("email_cliente"));
-            client.setData(request.getParameter(data));
+            client.setData((data));
             client.setRua(request.getParameter("rua_cliente"));
             client.setNumero(Integer.parseInt(request.getParameter("nr_cliente")));
             client.setCep(request.getParameter("cep_cliente"));

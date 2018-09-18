@@ -49,11 +49,7 @@
                         </div><!-- /.navbar-collapse -->
                     </div><!-- /.container-fluid -->
                 </nav>
-        <% 
-        ClienteDAO dao = new ClienteDAO();
-        List<Cliente> clientes = dao.BuscaCliente();
-        for( Cliente cliente:clientes ){
-        %>    
+  
        <div class="container">
         <h1 class="text-center">Cadastro Cliente</h1>
         <form class="form-horizontal"  action="CadastroCliente" method="POST">
@@ -64,7 +60,7 @@
             Nome <input type="text" class="form-control col-sm-7 " name="nome" value=""><%= cliente.getNome() %><br>
            
             <div class="form-group">
-            Data <input type="date" class ="form-control col-sm-3 " name="data" value=""><%= cliente.getData() %></div>           
+            Data <input type="date" class ="form-control col-sm-3 " name="data" value="<%= cliente.getData() %>"></div>           
             
             
             Email<input type="text" class="form-control col-sm-7" name="email" value=""><%= cliente.getEmail() %><br>

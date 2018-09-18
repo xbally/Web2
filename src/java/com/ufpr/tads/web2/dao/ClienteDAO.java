@@ -62,14 +62,19 @@ public class ClienteDAO {
         return clientes;
     }
     
-    public List<Cliente> Visualizar(int id) throws SQLException{
+    public Cliente Visualizar(int id) throws SQLException{
+      Cliente  cliente = new Cliente();
       ResultSet rs = null;    
-    List<Cliente> clientes = new ArrayList<>();
-        Statement stmt = conn.createStatement();
-        String query= "Select * from tb_cliente";
-         rs = stmt.executeQuery(query);
-        while (rs.next()){
+        
+        String query= "SELECT * FROM tb_cliente WHERE id_cliente = (?)";
+        
+        PreparedStatement stmt = conn.prepareStatement(query);
+        stmt.setInt(1, id);
+         
+        rs = stmt.executeQuery();
         Cliente clients= new Cliente();
+
+        while (rs.next())   {
         clients.setId(rs.getInt("id_cliente"));
         clients.setCpf(rs.getString("cpf_cliente"));
         clients.setNome(rs.getString("nome_cliente"));
@@ -80,10 +85,10 @@ public class ClienteDAO {
         clients.setCep(rs.getString("cep_cliente"));
         clients.setCidade(rs.getString("cidade_cliente"));
         clients.setUf(rs.getString("uf_cliente"));
-        clientes.add(clients);
+        
         }
-        return clientes;
-    }
+        return clients;
+   }
     
     public void Inserir(Cliente inserir){
     String Query = "INSERT INTO tb_cliente VALUES ((?),(?),(?),(?),(?),(?),(?),(?),(?))";
