@@ -5,7 +5,7 @@
 --%>
 
 
-<%@page import="com.ufpr.tads.web2.classes.Cliente"%>
+<%@page import="com.ufpr.tads.web2.beans.ClienteBean"%>
 <%@page import="java.util.List"%>
 <%@page import="com.ufpr.tads.web2.dao.ClienteDAO"%>
 <%@page import="java.*"%>
@@ -45,7 +45,7 @@
                                 </li>
                             </ul>
                            <ul class="nav navbar-nav navbar-right">
-                                <li><a href="portal.jsp">Volta</a></li>
+                                <li><a href="clientesListar.jsp">Volta</a></li>
                             </ul>
                         </div><!-- /.navbar-collapse -->
                     </div><!-- /.container-fluid -->

@@ -7,7 +7,7 @@ import javax.*;
 import java.util.Date;
 import java.util.List;
 import com.ufpr.tads.web2.dao.ClienteDAO;
-import com.ufpr.tads.web2.classes.Cliente;
+import com.ufpr.tads.web2.beans.ClienteBean;
 import java.util.ArrayList;
 
 public final class clientesListar_jsp extends org.apache.jasper.runtime.HttpJspBase

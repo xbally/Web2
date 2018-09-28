@@ -4,7 +4,7 @@
     Author     : gabri
 --%>
 
-<%@page import="com.ufpr.tads.web2.classes.Cliente"%>
+<%@page import="com.ufpr.tads.web2.beans.ClienteBean"%>
 <%@page import="java.util.List"%>
 <%@page import="com.ufpr.tads.web2.dao.ClienteDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -52,31 +52,35 @@
   
        <div class="container">
         <h1 class="text-center">Cadastro Cliente</h1>
-        <form class="form-horizontal"  action="CadastroCliente" method="POST">
+     
+        <form class="form-horizontal"  action="AlterarClienteServlet" method="POST">
             <div class="form-group">
+
+          
             <label class="control-label">CPF</label>
-             <input type="text" class="form-control  col-sm-3" name="CPF" value=""><br>
+            <input type="text" class="form-control  col-sm-3" name="cpf" value="${client.cpf}"><br>
             
-            Nome <input type="text" class="form-control col-sm-7 " name="nome" value=""><%= cliente.getNome() %><br>
+            Nome<input type="text" class="form-control col-sm-7 " name="nome" value="${client.nome}"><br>
            
             <div class="form-group">
-            Data <input type="date" class ="form-control col-sm-3 " name="data" value="<%= cliente.getData() %>"></div>           
+                Data <input type="date" class ="form-control col-sm-3 " name="data" value="${client.data}"></div><br>       
             
             
-            Email<input type="text" class="form-control col-sm-7" name="email" value=""><%= cliente.getEmail() %><br>
+            Email<input type="text" class="form-control col-sm-7" name="email" value="${client.email}"><br>
             
-            Rua <input type="text" class="form-control col-sm-7 " name="rua" value=""><%= cliente.getRua() %><br>
+            Rua <input type="text" class="form-control col-sm-7 " name="rua" value="${client.rua}"><br>
             
-            Numero <input type="text" class="form-control col-sm-7 " name="numero" value=""><%= cliente.getNumero() %><br>
+            Numero <input type="text" class="form-control col-sm-7 " name="numero" value="${client.numero}"><br>
             
-            CEP <input type="text" class="form-control col-sm-7 " name="cep" value=""><%= cliente.getCep() %><br>
+            CEP <input type="text" class="form-control col-sm-7 " name="cep" value="${client.cep}"><br>
             
-            Cidade <input type="text" class="form-control col-sm-7 " name="cidade" value=""><%= cliente.getCidade() %><br>
+            Cidade <input type="text" class="form-control col-sm-7 " name="cidade" value="${client.cidade}"><br>
             
-            UF <input type="text" class="form-control col-sm-7 " name="uf" value=""><%= cliente.getUf() %><br> <%}%>
+            UF <input type="text" class="form-control col-sm-7 " name="uf" value="${client.uf}">
             </div>
-            <input type="submit" value= "Cadastrar">
+            <input type="submit" value= "Alterar">
             </form>
+        </form>
         </div>
     </body>
 </html>

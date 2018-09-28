@@ -5,7 +5,7 @@
  */
 package com.ufpr.tads.web2.servlets;
 
-import com.ufpr.tads.web2.classes.Cliente;
+import com.ufpr.tads.web2.beans.ClienteBean;
 import com.ufpr.tads.web2.dao.ClienteDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -46,39 +46,23 @@ public class FormAlterarClienteServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try {
             ClienteDAO daoC = new ClienteDAO();            
-            Cliente client = new Cliente();
-      
+            ClienteBean clients = new ClienteBean();
+            ClienteBean b = new ClienteBean();
             
             int id = Integer.parseInt(request.getParameter("id"));
-            client.setId(id);
-            
-            String str = request.getParameter("data_cliente");
-            SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
-            Date data = new Date(format.parse(str).getTime()); 
-           
-
-            client.setCpf(request.getParameter("cpf_cliente"));
-            client.setNome(request.getParameter("nome_cliente"));
-            client.setEmail(request.getParameter("email_cliente"));
-            client.setData((data));
-            client.setRua(request.getParameter("rua_cliente"));
-            client.setNumero(Integer.parseInt(request.getParameter("nr_cliente")));
-            client.setCep(request.getParameter("cep_cliente"));
-            client.setCidade(request.getParameter("cidade_cliente"));
-            client.setUf(request.getParameter("uf_cliente"));
-            daoC.Alterar(client);
-        RequestDispatcher rd = getServletContext().getRequestDispatcher("/clientesListar.jsp");
-        rd.forward(request, response);
-        return;  
-            
+            clients.setId(id);
+            clients = daoC.Visualizar(id);
+            request.setAttribute("client", clients);
+      
         } catch (SQLException ex) {
             Logger.getLogger(FormAlterarClienteServlet.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(FormAlterarClienteServlet.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ParseException ex) {
-            Logger.getLogger(FormAlterarClienteServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        } 
+        RequestDispatcher rd = getServletContext().getRequestDispatcher("/clientesAlterar.jsp");
+        rd.forward(request, response);          
     }
+
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

@@ -47,30 +47,10 @@
                 </nav>
         
        <div class="container">
-        <h1 class="text-center">Cadastro Cliente</h1>
+        <h1 class="text-center">Cadastro Usuario</h1>
         <form class="form-horizontal"  action="CadastroCliente" method="POST">
             <div class="form-group">
-            <label class="control-label">CPF</label>
-             <input type="text" class="form-control  col-sm-3" name="CPF" value=""><br>
-            
-            Nome <input type="text" class="form-control col-sm-7 " name="nome" value=""><br>
-           
-            <div class="form-group">
-            Data <input type="date" class ="form-control col-sm-3 " name="data" value=""></div>           
-            
-            
-            Email<input type="text" class="form-control col-sm-7" name="email" value=""><br>
-            
-            Rua <input type="text" class="form-control col-sm-7 " name="rua" value=""><br>
-            
-            Numero <input type="text" class="form-control col-sm-7 " name="numero" value=""><br>
-            
-            CEP <input type="text" class="form-control col-sm-7 " name="cep" value=""><br>
-            
-            Cidade <input type="text" class="form-control col-sm-7 " name="cidade" value=""><br>
-            
-            UF <input type="text" class="form-control col-sm-7 " name="uf" value=""><br>
-            </div>
+              </div>
             <input type="submit" value= "Cadastrar">
             </form>
         </div>

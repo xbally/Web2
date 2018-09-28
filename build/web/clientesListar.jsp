@@ -8,7 +8,7 @@
 <%@page import="java.util.Date"%>
 <%@page import="java.util.List"%>
 <%@page import="com.ufpr.tads.web2.dao.ClienteDAO"%>
-<%@page import="com.ufpr.tads.web2.classes.Cliente"%>
+<%@page import="com.ufpr.tads.web2.beans.ClienteBean"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -18,7 +18,7 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <title>JSP Page</title>
+        <title>Listar</title>
     </head>
     <body>         <nav class="navbar navbar-default">
                     <div class="container-fluid">
@@ -44,6 +44,9 @@
                                         </ul>
                                 </li>
                             </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="clientesNovo.jsp">Novo</a></li>
+                            </ul>
                            <ul class="nav navbar-nav navbar-right">
                                 <li><a href="portal.jsp">Volta</a></li>
                             </ul>
@@ -64,19 +67,21 @@
         <th>Ação</th>
         <th>Ação</th>
         <th>Ação</th>
+        <th></th>
         <% 
         ClienteDAO dao = new ClienteDAO();
-        List<Cliente> clientes = dao.BuscaCliente();
-        for( Cliente cliente:clientes ){
-        %>         
+        List<ClienteBean> clientes = dao.BuscaCliente();
+        for( ClienteBean cliente:clientes ){
+        %>
+        
          <body><tr>
                        <td><%= cliente.getCpf() %></td>
                        <td><%= cliente.getNome() %></td>
                        <td><%= cliente.getEmail()%></td>
-                       <td><a href="VisualizarClienteServlet?id=5" class="glyphicon glyphicon-check">Visualizar</a></td>
-                       <td><a href="FormAlterarClienteServlet?id=5" class="glyphicon glyphicon-user">Alterar</a></td>
-                       <td><a href="RemoverClienteServlet?id=4" class="glyphicon glyphicon-trash"</a>Excluir</td>
-                       </tr>
+                       <td><a href="VisualizarClienteServlet?id=1" class="glyphicon glyphicon-check">Visualizar</a></td>
+                       <td><a href="FormAlterarClienteServlet?id=1" class="glyphicon glyphicon-user">Alterar</a></td>
+                       <td><a href="RemoverClienteServlet?id=1" class="glyphicon glyphicon-trash"</a>Excluir</td>
+                        </tr>
                  <% }%>
     </body>
 </html>

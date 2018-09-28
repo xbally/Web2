@@ -7,7 +7,7 @@ package com.ufpr.tads.web2.servlets;
 
 import com.ufpr.tads.web2.beans.ErroBean;
 import com.ufpr.tads.web2.beans.LoginBean;
-import com.ufpr.tads.web2.classes.Cliente;
+import com.ufpr.tads.web2.beans.ClienteBean;
 import com.ufpr.tads.web2.classes.Usuario;
 import com.ufpr.tads.web2.dao.ClienteDAO;
 import com.ufpr.tads.web2.dao.UsuarioDAO;
@@ -48,7 +48,7 @@ public class VisualizarClienteServlet extends HttpServlet {
            
             UsuarioDAO dao = new UsuarioDAO();
             ClienteDAO daoC = new ClienteDAO();
-            Cliente clients = new Cliente();
+            ClienteBean clients = new ClienteBean();
             int id = Integer.parseInt(request.getParameter("id"));
             clients.setId(id);
             clients = daoC.Visualizar(id);

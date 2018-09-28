@@ -3,7 +3,7 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
-import com.ufpr.tads.web2.classes.Cliente;
+import com.ufpr.tads.web2.beans.ClienteBean;
 import java.util.List;
 import com.ufpr.tads.web2.dao.ClienteDAO;
 

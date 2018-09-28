@@ -17,7 +17,7 @@
     </head>
     <body>
      
-               <%
+          <%
             LoginBean log = (LoginBean) session.getAttribute("login");
             if (log == null) {
                 RequestDispatcher rd = getServletContext().getRequestDispatcher("/erro.jsp");

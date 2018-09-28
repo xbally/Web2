@@ -47,18 +47,6 @@ public class CadastrarUsuarioServlet extends HttpServlet {
             usuario.setSenhausuario(request.getParameter("senha"));
             dao.insertUsuario(usuario);
         
-            out.println("<!DOCTYPE html>");
-            out.println("<html");
-            out.println("<head>");
-            out.println("<title>Servlet CadastrarUsuarioServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            
-            out.println("Usuário cadastrado com sucesso.<br>");
-            out.println("<a href=\"PortalServlet\">Voltar</a>");
-            
-            out.println("</body>");
-            out.println("</html>");
         } catch (SQLException ex) {
             Logger.getLogger(CadastrarUsuarioServlet.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {

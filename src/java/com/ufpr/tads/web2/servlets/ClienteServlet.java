@@ -7,7 +7,7 @@ package com.ufpr.tads.web2.servlets;
 
 import com.ufpr.tads.web2.beans.ErroBean;
 import com.ufpr.tads.web2.beans.LoginBean;
-import com.ufpr.tads.web2.classes.Cliente;
+import com.ufpr.tads.web2.beans.ClienteBean;
 import com.ufpr.tads.web2.classes.Usuario;
 import com.ufpr.tads.web2.dao.ClienteDAO;
 import com.ufpr.tads.web2.dao.UsuarioDAO;
@@ -71,7 +71,7 @@ public class ClienteServlet extends HttpServlet {
                 return;
         }else  {
              try{    
-                List<Cliente> clientes;              
+                List<ClienteBean> clientes;              
                 clientes = daoC.BuscaCliente();
                 request.setAttribute("clientes", clientes);
             } catch (SQLException ex) {

@@ -3,16 +3,27 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Web2/src/java/com/ufpr/tads/web2/servlets/LoginServlet.java</file>
-            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Web2/web/clientesVisualizar.jsp</file>
-            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Web2/src/java/com/ufpr/tads/web2/classes/Cliente.java</file>
-            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Web2/src/java/com/ufpr/tads/web2/servlets/LogoutServlet.java</file>
-            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Web2/src/java/com/ufpr/tads/web2/servlets/VisualizarClienteServlet.java</file>
-            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Web2/src/java/com/ufpr/tads/web2/dao/UsuarioDAO.java</file>
-            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Web2/src/java/com/ufpr/tads/web2/servlets/FormAlterarClienteServlet.java</file>
-            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Web2/src/java/com/ufpr/tads/web2/dao/ConnectionFactory.java</file>
-            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Web2/web/clientesAlterar.jsp</file>
-            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Web2/src/java/com/ufpr/tads/web2/dao/ClienteDAO.java</file>
+            <file>file:/C:/Users/gabri/OneDrive/Documentos/NetBeansProjects/WEB/Web2/src/java/com/ufpr/tads/web2/servlets/VisualizarClienteServlet.java</file>
+            <file>file:/C:/Users/gabri/OneDrive/Documentos/NetBeansProjects/WEB/Web2/web/clientesListar.jsp</file>
+            <file>file:/C:/Users/gabri/OneDrive/Documentos/NetBeansProjects/WEB/Web2/src/java/com/ufpr/tads/web2/beans/ClienteBean.java</file>
+            <file>file:/C:/Users/gabri/OneDrive/Documentos/NetBeansProjects/WEB/Web2/src/java/com/ufpr/tads/web2/servlets/RemoverClienteServlet.java</file>
+            <file>file:/C:/Users/gabri/OneDrive/Documentos/NetBeansProjects/WEB/Web2/build/generated/src/org/apache/jsp/clientesAlterar_jsp.java</file>
+            <file>file:/C:/Users/gabri/OneDrive/Documentos/NetBeansProjects/WEB/Web2/build/generated/src/org/apache/jsp/clientesListar_jsp.java</file>
+            <file>file:/C:/Users/gabri/OneDrive/Documentos/NetBeansProjects/WEB/Web2/src/java/com/ufpr/tads/web2/servlets/AlterarClienteServlet.java</file>
+            <file>file:/C:/Users/gabri/OneDrive/Documentos/NetBeansProjects/WEB/Web2/web/portal.jsp</file>
+            <file>file:/C:/Users/gabri/OneDrive/Documentos/NetBeansProjects/WEB/Web2/src/java/com/ufpr/tads/web2/servlets/LoginServlet.java</file>
+            <file>file:/C:/Users/gabri/OneDrive/Documentos/NetBeansProjects/WEB/Web2/src/java/com/ufpr/tads/web2/servlets/NovoClienteServlet.java</file>
+            <file>file:/C:/Users/gabri/OneDrive/Documentos/NetBeansProjects/WEB/Web2/web/clientesVisualizar.jsp</file>
+            <file>file:/C:/Users/gabri/OneDrive/Documentos/NetBeansProjects/WEB/Web2/src/java/com/ufpr/tads/web2/servlets/StartupServlet.java</file>
+            <file>file:/C:/Users/gabri/OneDrive/Documentos/NetBeansProjects/WEB/Web2/src/java/com/ufpr/tads/web2/servlets/FormAlterarClienteServlet.java</file>
+            <file>file:/C:/Users/gabri/OneDrive/Documentos/NetBeansProjects/WEB/Web2/src/java/com/ufpr/tads/web2/servlets/FormNovoClienteServlet.java</file>
+            <file>file:/C:/Users/gabri/OneDrive/Documentos/NetBeansProjects/WEB/Web2/web/clientesAlterar.jsp</file>
+            <file>file:/C:/Users/gabri/OneDrive/Documentos/NetBeansProjects/WEB/Web2/src/java/com/ufpr/tads/web2/servlets/ClienteServlet.java</file>
+            <file>file:/C:/Users/gabri/OneDrive/Documentos/NetBeansProjects/WEB/Web2/src/java/com/ufpr/tads/web2/dao/UsuarioDAO.java</file>
+            <file>file:/C:/Users/gabri/OneDrive/Documentos/NetBeansProjects/WEB/Web2/src/java/com/ufpr/tads/web2/beans/ConfigBean.java</file>
+            <file>file:/C:/Users/gabri/OneDrive/Documentos/NetBeansProjects/WEB/Web2/web/Cadastro.jsp</file>
+            <file>file:/C:/Users/gabri/OneDrive/Documentos/NetBeansProjects/WEB/Web2/src/java/com/ufpr/tads/web2/dao/ConnectionFactory.java</file>
+            <file>file:/C:/Users/gabri/OneDrive/Documentos/NetBeansProjects/WEB/Web2/web/clientesNovo.jsp</file>
         </group>
     </open-files>
 </project-private>

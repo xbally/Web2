@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ufpr.tads.web2.classes;
+package com.ufpr.tads.web2.beans;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  *
  * @author gabri
  */
-public class Cliente {
+public class ClienteBean implements Serializable{
     private int id;
     private String cpf;
     private String nome;
@@ -23,7 +24,7 @@ public class Cliente {
     private String cidade;
     private String uf;
 
-    public Cliente() {
+    public ClienteBean() {
     }
 
     public int getId() {

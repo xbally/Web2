@@ -36,10 +36,10 @@ public class LogoutServlet extends HttpServlet {
             throws ServletException, IOException {
 
 
-         ErroBean erro = new ErroBean();
+        ErroBean erro = new ErroBean();
         erro.setMsg("Usuário desconectado com sucesso");
-        erro.setPage("erro.jsp");
-        RequestDispatcher rd = getServletContext().getRequestDispatcher("/erro.jsp");
+        erro.setPage("index.jsp");
+        RequestDispatcher rd = getServletContext().getRequestDispatcher("/index.jsp");
         request.setAttribute("erro", erro);
         rd.forward(request, response);
     

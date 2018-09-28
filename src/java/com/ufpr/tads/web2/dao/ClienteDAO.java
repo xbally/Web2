@@ -5,7 +5,7 @@
  */
 package com.ufpr.tads.web2.dao;
 
-import com.ufpr.tads.web2.classes.Cliente;
+import com.ufpr.tads.web2.beans.ClienteBean;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -29,14 +29,14 @@ public class ClienteDAO {
             this.conn = (Connection) new com.ufpr.tads.web2.dao.ConnectionFactory().getConnection();
     }
     
-    public List<Cliente> BuscaCliente() throws SQLException {
+    public List<ClienteBean> BuscaCliente() throws SQLException {
     ResultSet rs = null;    
-    List<Cliente> clientes = new ArrayList<>();
+    List<ClienteBean> clientes = new ArrayList<>();
     Statement stmt = conn.createStatement();
     String query= "Select * from tb_cliente";
        rs = stmt.executeQuery(query);
         while (rs.next()){
-        Cliente clients= new Cliente();
+        ClienteBean clients= new ClienteBean();
         clients.setId(rs.getInt("id_cliente"));
         clients.setCpf(rs.getString("cpf_cliente"));
         clients.setNome(rs.getString("nome_cliente"));
@@ -46,24 +46,24 @@ public class ClienteDAO {
         return clientes;
     }
     
-    public List<Cliente> BuscaId(int id) throws SQLException{
+    public List<ClienteBean> BuscaId(int id) throws SQLException{
         ResultSet rs = null;
-        List<Cliente> clientes = new ArrayList<>();
+        List<ClienteBean> clientes = new ArrayList<>();
             Statement stmt = conn.createStatement();
         String query= "Select * from tb_cliente WHERE id_cliente = (?)";
        
         rs = stmt.executeQuery(query);
              
         while (rs.next()){
-        Cliente clients= new Cliente();
+        ClienteBean clients= new ClienteBean();
         clients.setId(rs.getInt("id_cliente"));
         clientes.add(clients);
         }
         return clientes;
     }
     
-    public Cliente Visualizar(int id) throws SQLException{
-      Cliente  cliente = new Cliente();
+    public ClienteBean Visualizar(int id) throws SQLException{
+      ClienteBean  cliente = new ClienteBean();
       ResultSet rs = null;    
         
         String query= "SELECT * FROM tb_cliente WHERE id_cliente = (?)";
@@ -72,7 +72,7 @@ public class ClienteDAO {
         stmt.setInt(1, id);
          
         rs = stmt.executeQuery();
-        Cliente clients= new Cliente();
+        ClienteBean clients= new ClienteBean();
 
         while (rs.next())   {
         clients.setId(rs.getInt("id_cliente"));
@@ -90,7 +90,7 @@ public class ClienteDAO {
         return clients;
    }
     
-    public void Inserir(Cliente inserir){
+    public void Inserir(ClienteBean inserir){
     String Query = "INSERT INTO tb_cliente VALUES ((?),(?),(?),(?),(?),(?),(?),(?),(?))";
     PreparedStatement stmt = null;
     try{
@@ -122,15 +122,16 @@ public class ClienteDAO {
         }
     }
     
-    public void Alterar(Cliente clientes){
+    public void Alterar(ClienteBean clientes){
         String  Query = "UPDATE tb_cliente SET  cpf_cliente = ?, nome_cliente = ?, email_cliente = ?, data_cliente = ?, rua_cliente = ?, nr_cliente = ?, cep_clientes = ?, cidade_cliente = ?, uf_cliente = ?";
         PreparedStatement stmt = null;
+             
         try{
         stmt = conn.prepareStatement(Query);
         stmt.setString(1, clientes.getCpf());
         stmt.setString(2, clientes.getNome());
         stmt.setString(3, clientes.getEmail());
-        stmt.setDate(4, (Date) clientes.getData());
+        stmt.setDate(4,new java.sql.Date(clientes.getData().getTime()));
         stmt.setString(5, clientes.getRua());
         stmt.setInt(6, clientes.getNumero());
         stmt.setString(7, clientes.getCep());

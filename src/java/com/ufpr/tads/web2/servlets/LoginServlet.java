@@ -71,7 +71,7 @@ public class LoginServlet extends HttpServlet {
             ErroBean erro = new ErroBean();
                 erro.setMsg("Usuário/Senha inválidos");
                 erro.setPage("index.jsp");
-                RequestDispatcher rd = getServletContext().getRequestDispatcher("/erro.jsp");
+                RequestDispatcher rd = getServletContext().getRequestDispatcher("/index.jsp");
                 request.setAttribute("erro", erro);
                 rd.forward(request, response);
             }

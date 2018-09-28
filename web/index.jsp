@@ -12,28 +12,60 @@
          <title>Login</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     </head>
     <body>
-         <form action="LoginServlet" method="POST">
-             
-              <div class="row">
-                <h1 class="text-center">Login</h1></div>
-             
-             <div class = "container">      
-         
-            Login
-            <div class="input-group">
-             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input type="text" name="login" value="" class="form-control col-sm-4"><br>
+        <div class="container">
+            <form class="form-horizontal" action="LoginServlet" method="POST">
+               <div class="row">   
+                <div class="col-md-3"></div>
+                <div class="col-md-6"> 
+                    <h1>Login</h1></div>
             </div>
-            Senha
-            <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-            <input type="password" name="senha" value="" class="form-control col-sm-4"><br></div>
-            <input type="submit" value="Login"  class="btn btn-primary">
+          
+   
+         <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="form-group has-danger">
+                        <label>Login</label>
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                      <input type="text" name="login" class="form-control" value="">
+                        </div>    
+                    </div>
+                </div>
+                </div>
+        <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="form-group">    
+                        <label>Senha</label> 
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0"> <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+            <input type="password" name="senha" class="form-control" value="">
+                        </div>
+                        </div>  
+                    </div>
+                </div>
+        <div class="row" style="padding-top: 1rem">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <input type="submit" value="Login" class="btn btn-success"><i class="fa fa-sign-in"></input></div>
+            </div>
+                    
+        <jsp:useBean id="erro" class="com.ufpr.tads.web2.beans.ErroBean" scope="request"/>
+        <jsp:setProperty name="erro" property="*"/>
+    <div  class="form-group col-md-6">
+    <div class="alert alert-danger">
+    <strong>
+      <jsp:getProperty name="erro" property="msg"/></strong></div></div>
+      
+      
+   
+         
+        </div>
         </form>
     </body>
 </html>
